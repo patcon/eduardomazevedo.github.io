@@ -1,0 +1,37 @@
+- title: Market Failure in Kidney Exchange
+  url: /papers/agarwal-et-al-kidney-exchange.pdf
+  category: Working Papers
+  coauthors: [NA, IA, CF, OK]
+
+- title: Strategy-proofness in the Large
+  url: /papers/azevedo-budish-spl.pdf
+  category: Working Papers
+  coauthors: [EB]
+  misc:
+    - Revise and resubmit, _Review of Economic Studies_.
+  links:
+    - text: Appendix
+      url: /papers/azevedo-budish-spl-appendix.pdf
+    - text: Supplementary Material
+      url: /papers/azevedo-budish-spl-supplementary-material.pdf
+
+- title: Existence of Equilibrium in Large Matching Markets with Complementarities
+  url: /papers/Azevedo%20Hatfield%20-%20Existence%20of%20Stable%20Matchings%20with%20Complements.pdf
+  category: Working Papers
+  coauthors: [JWH]
+  misc:
+    - Revise and resubmit, _Econometrica_.
+
+- title: Perfect Competition in Markets with Adverse Selection
+  url: /papers/Azevedo%20and%20Gottlieb%20-%20Competition%20with%20Adverse%20Selection.pdf
+  category: Publications
+  coauthors: [DG]
+  misc:
+    - _Econometrica_, 85 (1), 67-105, 2017.
+  links:
+    - text: Appendix
+      url: /papers/Azevedo%20and%20Gottlieb%20-%20Competition%20with%20Adverse%20Selection%20-%20Online%20Appendix.pdf
+    - text: Replication Code
+      url: https://github.com/rafaelmourao/ag-competition
+    - text: Supplementary Materials
+      url: /papers/Azevedo%20and%20Gottlieb%20-%20Competition%20with%20Adverse%20Selection%20-%20Supplementary%20Material.pdf
