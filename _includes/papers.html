@@ -5,8 +5,9 @@
     <p>
     <a class="paper" href="{{ paper.url }}">{{ paper.title }}</a><br />
       with
-      {% for coauthor in paper.coauthors %}
-        <a class="coauthor"{% if coauthor.url %} href="{{ coauthor.url }}"{% endif %}>{{ coauthor.name }}</a>,
+      {% for key in paper.coauthors %}
+        {% assign person = site.data.people.[key] %}
+        <a class="coauthor"{% if person.url %} href="{{ person.url }}"{% endif %}>{{ person.name }}</a>,
       {% endfor %}
     </p>
   {% endfor %}
