@@ -217,10 +217,15 @@ wrapper: white, is around everything. Size adjusts
 	text-decoration: none;
 	}
 
-	.journal, .journal:visited, .journal:hover, .journal:active {
+	.journal, .journal:visited, .journal:hover, .journal:active, em {
 	font: 16px Georgia, "Times New Roman", Times, serif;
 	/*font-weight:bold;*/
 	font-style: italic;
 	color: #000000;
 	text-decoration: none;
 	}
+
+/* Jekyll conversion */
+span.link {
+  margin-left: 8px;
+}

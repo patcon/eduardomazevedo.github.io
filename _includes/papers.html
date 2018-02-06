@@ -1,51 +1,27 @@
 <div id="content">
-  <h2>Working Papers</h2>
+  {% assign papers_grouped = site.data.papers | group_by: 'category' %}
+  {% for group in papers_grouped %}
+    <h2>{{ group.name }}</h2>
 
-  {% for paper in site.data.papers %}
-    <p>
-    <a class="paper" href="{{ paper.url }}">{{ paper.title }}</a><br />
-      with
-      {% for key in paper.coauthors %}
-        {% assign person = site.data.people.[key] %}
-        <a class="coauthor"{% if person.url %} href="{{ person.url }}"{% endif %}>
-          {{ person.name }}</a>{% unless forloop.last %},{% endunless %}
-      {% endfor %}
-    </p>
+    {% for paper in group.items %}
+      <p>
+        <a class="paper" href="{{ paper.url }}">{{ paper.title }}</a><br />
+        with
+        {% for key in paper.coauthors %}
+          {% assign person = site.data.people.[key] %}
+          <a class="coauthor"{% if person.url %} href="{{ person.url }}"{% endif %}>
+            {{ person.name }}</a>{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+        <br />
+        {% for line in paper.misc %}
+          {{ line | markdownify | remove: '<p>' | remove: '</p>' }}<br />
+        {% endfor %}
+        {% for link in paper.links %}
+          <span class="link">[<a href="{{ link.url }}">{{ link.text }}</a>]</span>
+        {% endfor %}
+      </p>
+    {% endfor %}
   {% endfor %}
-
-  <p>
-    <a class="paper" href="./papers/azevedo-budish-spl.pdf">Strategy-proofness in the Large</a><br />
-    with
-    <a class="coauthor" href="http://faculty.chicagobooth.edu/eric.budish/">Eric Budish</a><br />
-    Revise and resubmit, <a class="journal">Review of Economic Studies</a>.<br />
-    &nbsp;&nbsp;[<a href="./papers/azevedo-budish-spl-appendix.pdf">Appendix</a>]
-    &nbsp;&nbsp;[<a href="./papers/azevedo-budish-spl-supplementary-material.pdf">Supplementary Material</a>]
-  </p>
-
-  <p><a class="paper" href=
-  "./papers/Azevedo%20Hatfield%20-%20Existence%20of%20Stable%20Matchings%20with%20Complements.pdf">
-  Existence of Equilibrium in Large Matching Markets with
-  Complementarities</a><br />
-  with <a class="coauthor" href=
-  "http://scholar.google.com/citations?user=jKB2WcMAAAAJ&amp;hl=en">John William
-  Hatfield</a><br />
-  Revise and resubmit, <a class="journal">Econometrica</a>.</p>
-
-  <h2>Publications</h2>
-
-  <p><a class="paper" href=
-  "./papers/Azevedo%20and%20Gottlieb%20-%20Competition%20with%20Adverse%20Selection.pdf">
-  Perfect Competition in Markets with Adverse Selection</a><br />
-  with <a class="coauthor" href=
-  "http://apps.olin.wustl.edu/faculty/gottlieb/Daniel_Gottlieb/Daniel_Gottlieb.html">
-  Daniel Gottlieb</a><br />
-  <a class="journal">Econometrica</a>, 85 (1), 67-105, 2017.<br />
-  &nbsp;&nbsp;[<a href=
-  "./papers/Azevedo%20and%20Gottlieb%20-%20Competition%20with%20Adverse%20Selection%20-%20Online%20Appendix.pdf">Appendix</a>]
-  &nbsp;&nbsp;[<a href="https://github.com/rafaelmourao/ag-competition">Replication
-  Code</a>] &nbsp;&nbsp;[<a href=
-  "./papers/Azevedo%20and%20Gottlieb%20-%20Competition%20with%20Adverse%20Selection%20-%20Supplementary%20Material.pdf">Supplementary
-  Materials</a>]</p>
 
   <p><a class="paper" href=
   "./papers/Azevedo-Leshno-Supply-and-Demand-Matching.pdf">A Supply and Demand
