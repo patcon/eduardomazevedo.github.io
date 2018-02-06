@@ -1,2 +1,4 @@
+repository: patcon/eduardomazevedo.github.io
+
 plugins:
   - jekyll-sitemap
