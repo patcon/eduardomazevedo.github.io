@@ -26,3 +26,12 @@
   url: /papers/Azevedo%20and%20Gottlieb%20-%20Competition%20with%20Adverse%20Selection.pdf
   category: Publications
   coauthors: [DG]
+  misc:
+    - _Econometrica_, 85 (1), 67-105, 2017.
+  links:
+    - text: Appendix
+      url: /papers/Azevedo%20and%20Gottlieb%20-%20Competition%20with%20Adverse%20Selection%20-%20Online%20Appendix.pdf
+    - text: Replication Code
+      url: https://github.com/rafaelmourao/ag-competition
+    - text: Supplementary Materials
+      url: /papers/Azevedo%20and%20Gottlieb%20-%20Competition%20with%20Adverse%20Selection%20-%20Supplementary%20Material.pdf
