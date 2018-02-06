@@ -7,7 +7,8 @@
       with
       {% for key in paper.coauthors %}
         {% assign person = site.data.people.[key] %}
-        <a class="coauthor"{% if person.url %} href="{{ person.url }}"{% endif %}>{{ person.name }}</a>,
+        <a class="coauthor"{% if person.url %} href="{{ person.url }}"{% endif %}>
+          {{ person.name }}</a>{% unless forloop.last %},{% endunless %}
       {% endfor %}
     </p>
   {% endfor %}
